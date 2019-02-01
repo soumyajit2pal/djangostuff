@@ -1,0 +1,23 @@
+
+body
+{
+    background: url(https://images.unsplash.com/photo-1452587925148-ce544e77e70d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+
+}
+
+.jumbotron
+{
+    margin-top: 200px;
+    background-color:rgba(93, 125, 151,0.8);
+    color: rgb(238, 230, 230);
+}
+h1{
+    text-align: center;
+}
+ul{
+    font-size: 25px;
+    list-style-type: square n;;
+}

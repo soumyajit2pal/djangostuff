@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Registration Form</title>
+<style type="text/css">
+.header
+{
+	width:30%;
+	margin:50px auto 0px;
+	color:white;
+	background:grey;
+	text-align:center;
+	border:1px solid gray;
+	border-bottom:none;
+	border-radius:10px 10px 0px 0px;
+	padding:20px;
+}
+form
+{
+	width:30%;
+	margin:0px auto;
+	padding:20px;
+	border:1px solid gray;
+	background:rgba(0,204,204,0.5);
+	border-radius:0px 0px 10px 10px;
+}
+.input-group
+{
+	margin:10px 0px 10px 0px;
+}
+.input-group label
+{
+	display:block;
+	text-align:left;
+	margin:3px;
+}
+.input-group input
+{
+	height:30px;
+	width:93%;
+	padding:5px 10px;
+	font-size:16px;
+	border-radius:5px;
+	border:1px solid gray;
+	font-family:"arial Black";	
+}
+.btn
+{
+	padding:10px;
+	font-size:15px;
+	color:white;
+	background:rgba(0,102,204,1);
+	cursor:pointer;
+	border:none;
+	border-radius:5px;
+	margin-left:40%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h2>Register</h2>
+</div>
+
+<form>
+
+<div class="input-group">
+<label>Username</label>
+<input type="text" placeholder="Username" name="u_name" />
+</div>
+
+<div class="input-group">
+<label>Email</label>
+<input type="email" placeholder="Enter Email" name="email" />
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input type="password" placeholder="Enter password" name="pws" />
+</div>
+
+<div class="input-group">
+<label>Confirm Password</label>
+<input type="password" placeholder="Retype password" name="cpws" />
+</div>
+<div class="reg">
+<button type="submit" name="reg_user" class="btn">Register</button>
+<!-- <p> Already a member? <a href="sign_in.html" style="text-decoration:none">Sign in</a></p> -->
+</div>
+</form>
+
+{{reg_page}}
+</body>
+</html>
