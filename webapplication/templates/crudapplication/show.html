@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Employess Records</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Details</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Employee ID</th>
+              <th>Employee Name</th>
+              <th>Employee Email</th>
+              <th>Employee Contact</th>
+              <th>Employee Joining Day</th>
+              <th>Employee Joining Time</th>
+              <th>Employee Action</th>
+            </tr>
+          </thead>
+          <tbody>
+              {% for employee in employees %}
+            <tr>
+              <td>{{employee.eid}}</td>
+              <td>{{employee.ename}}</td>
+              <td>{{employee.eemail}}</td>
+              <td>{{employee.econtact}}</td>
+              <td>{{employee.edate}}</td>
+              <td>{{employee.etime}}</td>
+              <td>
+                  <a href="/edit/{{ employee.id }}">Edit</a>
+                  <a href="/delete/{{ employee.id }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <br>
+        <br>
+        <center><a href="/emp" class="btn btn-primary">Add New Record</a></center>
+      </div> 
+</body>
+</html>

@@ -1,0 +1,27 @@
+  #alerm_input
+  {
+    border: 8px solid lightblue;
+    border-radius: 20px;
+    padding: 40px;
+    width: 20%;
+    height: 20%;
+    margin: 120px;
+    background: lightcyan;
+    font-family: Arial;
+    font-size: 20px;
+  }
+  body {
+    background: rgb(85, 81, 81);
+}
+
+.clock {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: rgb(23, 212, 254);
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
+body {font-family: Arial, Helvetica, sans-serif;}  

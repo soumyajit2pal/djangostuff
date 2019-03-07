@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <form method="POST" class="post-form" action="/update/{{employee.id}}">
+            {% csrf_token %}
+        <input type="text" name="eid" id="id_eid" value="{{employee.eid}}" />  
+        <input type="text" name="ename" id="id_ename" value="{{employee.ename}}" />   
+        <input type="email" name="eemail" id="id_eemail" value="{{employee.eemail}}" />   
+        <input type="text" name="econtact" id="id_econtact" value="{{employee.econtact}}" /> 
+<button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</body>
+</html>

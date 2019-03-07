@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reminder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static "css/reminder.css" %}">
+    <script type="text/javascript" src="{% static "js/alerm.js" %}"></script>
+</head>
+<body onload="showTime()">
+    <form method="POST" action="{% url 'index' %}">{% csrf_token %}
+        <div id="MyClockDisplay" class="clock"></div>
+            <div id="alerm_input">
+                <select name="hour">
+                        <!-- {% with '0'|center:23 as range %}
+                        {% for _ in range %}
+                        <option value="{{forloop.counter}}">{{forloop.counter}}</option>
+                        {% endfor %}
+                        {% endwith %} -->
+                    {% for i in hr %}
+                    <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+                <select name="minutes">
+                    <!-- {% with '0'|center:59 as range %}
+                    {% for _ in range %}
+                    <option value="{{forloop.counter}}">{{forloop.counter}}</option>
+                    {% endfor %}
+                    {% endwith %} -->
+                    {% for i in min %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+                <select name="seconds">
+                        <!-- {% with ''|center:59 as range %}
+                        {% for _ in range %}
+                        <option value="{{forloop.counter}}">{{forloop.counter}}</option>
+                        {% endfor %}
+                        {% endwith %} -->
+                        {% for i in sec %}
+                        <option value="{{i}}">{{i}}</option>
+                        {% endfor %}
+                </select>
+                <input type="submit" value="submit">
+            </div>
+        </form>
+</body>
+</html>

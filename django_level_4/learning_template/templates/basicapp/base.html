@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <l1><a class="navbar-brand" href="{% url 'index' %}">BRAND</a></l1>
+                <l1><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></l1>
+                <l1><a class="navbar-link" href="{% url 'basicapp:other' %}">Other</a></l1>            
+                <l1><a class="navbar-link" href="{% url 'basicapp:relative' %}">Relative</a></l1>            
+            </ul>
+        </div>    
+    </nav>
+<div class="container">
+     {% block body_block %}
+     {% endblock %}
+</div>
+
+</body>
+</html>
